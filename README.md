@@ -119,11 +119,13 @@ Il sistema ragiona così su finestre di dati multivariate. Insieme all'allarme r
 
 ## Perché lo spazio
 
-Verso Marte un messaggio impiega fino a 22 minuti ad arrivare e, durante la congiunzione solare, le comunicazioni si interrompono per settimane. Un guasto in una serra a ciclo chiuso va gestito in poche ore, quindi la serra deve saper fare la diagnosi da sola.
+Nelle missioni di lunga durata, verso una base lunare o verso Marte, coltivare piante a bordo fa parte del sistema di supporto alla vita. Riduce i rifornimenti da imbarcare, aiuta a rigenerare l'aria e a riciclare l'acqua, e ha effetti documentati sul benessere dell'equipaggio. Queste serre non si possono collaudare in volo, quindi si provano a terra, in impianti isolati che ne riproducono i vincoli. Il riferimento europeo è EDEN ISS del DLR, in Antartide: nell'inverno 2019 l'equipaggio dedicava alla serra circa 2,6 ore al giorno, e una quota rilevante di quel tempo andava in set-up, manutenzione e correzione dei sistemi di controllo.
 
-Nei sistemi spaziali questa capacità ha un nome preciso, Fault Detection, Isolation and Recovery: rilevare un guasto, localizzarlo e avviare il ripristino. Sulle piattaforme robotiche è prassi consolidata, mentre nelle serre, dove una parte del sistema da diagnosticare è viva, è ancora poco applicata. Nella serra antartica EDEN ISS, analogo terrestre delle serre spaziali, nell'inverno 2019 l'equipaggio dedicava alla serra circa 2,6 ore al giorno.
+Oggi, quando qualcosa non va, la diagnosi si fa da Terra. In EDEN ISS il sistema di monitoraggio manda un avviso via satellite a un gruppo di agronomi a Brema, che discutono e comunicano la contromisura. Verso Marte questo schema si inceppa: un messaggio impiega fino a 22 minuti ad arrivare e, durante la congiunzione solare, le comunicazioni si interrompono per settimane. Un guasto in una serra fuori suolo e a ciclo chiuso va invece gestito in poche ore, quindi il ciclo "rileva, chiedi a Terra, aspetta, intervieni" non sempre si chiude in tempo.
 
-Sulla Terra questo vuol dire un impianto conducibile da remoto per un intero ciclo colturale, che fa anche da analogo terrestre di una serra per missioni di lunga durata.
+Serve che sia la serra a fare la diagnosi. Nei sistemi spaziali questa capacità si chiama Fault Detection, Isolation and Recovery (FDIR): rilevare un guasto, localizzarlo e avviare il ripristino. Sulle piattaforme robotiche è prassi consolidata. Nelle serre è ancora poco applicata, perché una parte del sistema da diagnosticare è viva e i suoi tempi non sono quelli di un attuatore.
+
+Sulla Terra la stessa capacità si misura con lo stesso metro, le ore di lavoro degli operatori. Un impianto che riconosce da solo le proprie anomalie si può condurre da remoto per un intero ciclo colturale, e diventa un banco di prova a terra per le serre delle missioni future.
 
 <p align="center">
   <picture>
