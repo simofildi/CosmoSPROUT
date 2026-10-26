@@ -88,7 +88,7 @@ Sono quattro segnali su tre sottosistemi, e si muovono in momenti diversi. Letti
 
 Il sistema invece li legge insieme. Per ogni grandezza il Digital Twin sa quanto dovrebbe valere, quindi su ogni canale c'è un residuo. Guardando tutti i residui sulla stessa finestra temporale si vede quale si è mosso per primo senza una spiegazione: qui è la portata, e tutto il resto ne discende. La causa è idraulica.
 
-Per arrivarci il sistema usa la matrice di firma dei guasti. Dalla sola struttura del modello stabilisce quale impronta lascia ogni guasto sull'insieme dei residui, e quindi quali guasti sono rilevabili e quali si possono distinguere fra loro. Un classificatore addestrato sui residui, vincolato da questa matrice, restituisce l'ipotesi di causa con una probabilità calibrata. Se la probabilità è troppo bassa non classifica e passa il caso all'operatore. Insieme all'allarme arrivano così la causa più probabile, quanto è probabile e il tempo utile per intervenire.
+Un classificatore addestrato sui residui restituisce l'ipotesi di causa con una probabilità calibrata. Se la probabilità è troppo bassa non classifica e passa il caso all'operatore. Insieme all'allarme arrivano così la causa più probabile, quanto è probabile e il tempo utile per intervenire.
 
 <p align="center">
   <picture>
