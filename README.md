@@ -75,9 +75,20 @@ Il progetto si regge sull'anomaly detection basata sui residui. Un Digital Twin 
 
 ## Dalla correlazione alla causa
 
-Un singolo segnale raramente basta. Uno scostamento che nasce in un sottosistema si manifesta in un altro, con ritardi diversi. Un'occlusione parziale della pompa di ricircolo, per esempio, riduce la portata; poi cala l'ossigeno, sale l'ammoniaca e si sposta il pH. Letti uno per uno, i canali indicano un problema chimico, e una correzione chimica coprirebbe la causa senza risolverla. Letti insieme, il primo scostamento che il modello non sa spiegare è quello della portata, quindi la causa è idraulica.
+In una serra a ciclo chiuso idraulica, chimica, clima e coltura sono legati fra loro. Uno scostamento che nasce in un sottosistema si fa vedere in un altro, e ci arriva con ritardi diversi. Per questo un singolo segnale raramente basta a capire cosa sta succedendo.
 
-Il sistema ragiona così su finestre di dati multivariate. Insieme all'allarme restituisce l'ipotesi di causa, la sua probabilità e il tempo utile per intervenire.
+Prendiamo un'occlusione parziale della pompa di ricircolo. Lo scostamento si propaga così:
+
+1. cala la portata della soluzione;
+2. cala l'ossigeno disciolto;
+3. sale l'ammoniaca;
+4. si sposta il pH.
+
+Sono quattro segnali su tre sottosistemi, e si muovono in momenti diversi. Letti uno per uno indicano un problema chimico, e la correzione chimica nasconde l'origine senza risolverla: la pompa resta occlusa.
+
+Il sistema invece li legge insieme. Per ogni grandezza il Digital Twin sa quanto dovrebbe valere, quindi su ogni canale c'è un residuo. Guardando tutti i residui sulla stessa finestra temporale si vede quale si è mosso per primo senza una spiegazione: qui è la portata, e tutto il resto ne discende. La causa è idraulica.
+
+Per arrivarci il sistema usa la matrice di firma dei guasti. Dalla sola struttura del modello stabilisce quale impronta lascia ogni guasto sull'insieme dei residui, e quindi quali guasti sono rilevabili e quali si possono distinguere fra loro. Un classificatore addestrato sui residui, vincolato da questa matrice, restituisce l'ipotesi di causa con una probabilità calibrata. Se la probabilità è troppo bassa non classifica e passa il caso all'operatore. Insieme all'allarme arrivano così la causa più probabile, quanto è probabile e il tempo utile per intervenire.
 
 <p align="center">
   <picture>
