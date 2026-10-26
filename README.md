@@ -23,13 +23,13 @@
 
 ## 🌱 Il progetto
 
-Una serra chiusa e autonoma, sulla Terra come in una base lunare, funziona solo se può fidarsi dei propri dati. **CosmoSPROUT** costruisce il livello diagnostico che lo rende possibile, partendo da uno dei fitotroni dell'**Agri Research and Teaching Center** dell'Università Campus Bio-Medico di Roma, nell'ambito del programma **V.I.T.A. Open Innovation**.
+Una serra chiusa e autonoma, sulla Terra come in una base lunare, funziona solo se può fidarsi dei propri dati. **CosmoSPROUT** costruisce il livello diagnostico che le dice quando fidarsi. Partiamo da uno dei fitotroni dell'Agri Research and Teaching Center dell'Università Campus Bio-Medico di Roma, nel programma V.I.T.A. Open Innovation.
 
 ---
 
 ## 🚨 Il problema
 
-Lo stesso valore anomalo può avere cinque cause diverse. Sul segnale si somigliano tutte, ma ognuna richiede un intervento diverso:
+Lo stesso valore anomalo può avere cinque cause. Sul segnale si somigliano, eppure ognuna chiede un intervento diverso:
 
 | Causa | Cosa serve |
 |---|---|
@@ -39,13 +39,13 @@ Lo stesso valore anomalo può avere cinque cause diverse. Sul segnale si somigli
 | 🌿 Anomalia della pianta | Un intervento agronomico |
 | ❓ Dato incoerente | Escluderlo dall'analisi |
 
-Un allarme a soglia dice solo che un valore è fuori range, non perché. E le derive lente, che fuori range non ci vanno mai, non le vede affatto.
+Un allarme a soglia segnala che un valore è fuori range senza indicarne la causa. Le derive lente, che restano sotto soglia, non le vede proprio.
 
 ---
 
 ## 🧠 Come funziona
 
-**Anomaly detection basata sui residui.** Un Digital Twin basato sui bilanci di massa ed energia calcola in continuo il valore atteso di ogni grandezza. Il sistema non analizza le serie grezze ma lo scarto fra misura e valore atteso: così intercetta anche le derive sotto soglia e si può addestrare con pochi mesi di storico.
+Il progetto si regge sull'anomaly detection basata sui residui. Un Digital Twin costruito sui bilanci di massa ed energia calcola in continuo il valore atteso di ogni grandezza. Il sistema lavora sullo scarto fra misura e valore atteso, da cui il modello fisico ha già tolto le variazioni prevedibili come il ciclo di luce, la stagione e i cambi di set point. Quello che resta è il segnale del guasto: così il sistema intercetta anche le derive sotto soglia e si può addestrare con pochi mesi di storico.
 
 ```mermaid
 flowchart LR
@@ -73,19 +73,19 @@ flowchart LR
 
 ## 🎯 Cosa otteniamo
 
-- 🔍 **Rilevazione**: le anomalie emergono prima che il valore esca dalla soglia.
-- 🧭 **Isolamento**: per ogni anomalia, la causa probabile con una probabilità calibrata. Se l'evidenza non basta, decide l'operatore.
-- 📷 **Canale visuale**: le telecamere sulla coltura separano il guasto del sensore dal problema della pianta.
-- ⏳ **Prognosi**: quanto tempo resta prima che serva intervenire.
-- 🧪 **Guasti indotti**: per insegnare al sistema a riconoscerli, li provochiamo in modo controllato e reversibile.
+- 🔍 **Rilevazione**: il sistema segnala l'anomalia anche quando il valore resta dentro la soglia.
+- 🧭 **Isolamento**: per ogni anomalia propone una causa, con una probabilità calibrata. Se l'evidenza non basta, si astiene e passa il caso all'operatore.
+- 📷 **Canale visuale**: le telecamere guardano la coltura. Se le sonde vedono uno scostamento e la pianta sta bene, il sospetto cade sul sensore.
+- ⏳ **Prognosi**: stima quanto tempo resta prima che una grandezza esca dai limiti e quando conviene ricalibrare ogni sonda.
+- 🧪 **Guasti indotti**: lo storico dell'impianto non contiene ancora guasti, quindi li provochiamo noi, in modo controllato e reversibile, per insegnare al sistema a riconoscerli.
 
 ---
 
 ## 🚀 Perché lo spazio
 
-Verso Marte un messaggio impiega fino a 22 minuti ad arrivare e, durante la congiunzione solare, le comunicazioni si interrompono per settimane. Una serra a ciclo chiuso, invece, va gestita in ore. Deve quindi saper diagnosticare da sola.
+Verso Marte un messaggio impiega fino a 22 minuti ad arrivare e, durante la congiunzione solare, le comunicazioni si interrompono per settimane. Un guasto in una serra a ciclo chiuso va gestito in poche ore, quindi la serra deve saper fare la diagnosi da sola.
 
-Il risultato: un impianto conducibile da remoto per un intero ciclo colturale e un analogo terrestre delle serre per missioni spaziali di lunga durata.
+Sul fitotrone del Centro questo vuol dire un impianto conducibile da remoto per un intero ciclo colturale, che fa anche da analogo terrestre di una serra per missioni di lunga durata.
 
 ---
 
