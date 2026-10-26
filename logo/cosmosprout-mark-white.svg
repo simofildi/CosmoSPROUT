@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="CosmoSPROUT">
+  <title>CosmoSPROUT</title>
+  <defs>
+    <mask id="gapm-white" maskUnits="userSpaceOnUse" x="0" y="0" width="120" height="120">
+      <rect width="120" height="120" fill="#fff"/>
+      <path d="M108.06,60.22 A50,15 -16 0 1 11.94,87.78" fill="none" stroke="#000" stroke-width="11"/>
+    </mask>
+  </defs>
+  <path d="M11.94,87.78 A50,15 -16 0 1 108.06,60.22" fill="none" stroke="#F4F8F3" stroke-width="4.5"/>
+  <g mask="url(#gapm-white)">
+    <path d="M60,106 C60,92 61,76 60,60" fill="none" stroke="#7CC487" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <path d="M60.50,67.00 Q50.65,47.71 29.00,47.00 Q38.85,66.29 60.50,67.00Z" fill="#7CC487"/>
+  <path d="M60.00,60.00 Q86.43,56.28 95.00,31.00 Q68.57,34.72 60.00,60.00Z" fill="#7CC487"/>
+  <path d="M108.06,60.22 A50,15 -16 0 1 11.94,87.78" fill="none" stroke="#F4F8F3" stroke-width="4.5"/>
+  <circle cx="20.44" cy="93.14" r="5.8" fill="#C2307A"/>
+</svg>
