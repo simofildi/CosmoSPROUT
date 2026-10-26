@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 30" width="520" height="30" role="img" aria-label="">
+<title></title>
+<defs><linearGradient id="goldvd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A9864F"/><stop offset=".5" stop-color="#F0D9AC"/><stop offset="1" stop-color="#A9864F"/></linearGradient><linearGradient id="fadevd" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#D3B27C" stop-opacity="0"/><stop offset=".5" stop-color="#D3B27C" stop-opacity="1"/><stop offset="1" stop-color="#D3B27C" stop-opacity="0"/></linearGradient><filter id="glowvd" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<rect x="0" y="14.5" width="230.0" height="1" fill="url(#fadevd)"/>
+<rect x="290.0" y="14.5" width="230.0" height="1" fill="url(#fadevd)"/>
+<ellipse cx="260.0" cy="15" rx="16" ry="5" transform="rotate(-16 260.0 15)" fill="none" stroke="#D3B27C" stroke-width="1.1"/>
+<circle cx="247.5" cy="20.6" r="2.6" fill="url(#goldvd)"/>
+</svg>
