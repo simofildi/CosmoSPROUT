@@ -14,7 +14,7 @@
 
 **Capiamo quando fidarsi dei sensori e distinguiamo un guasto da un'anomalia della pianta.**
 
-[Il progetto](#il-progetto) · [Il problema](#il-problema) · [Come funziona](#come-funziona) · [Cosa otteniamo](#cosa-otteniamo) · [Perché lo spazio](#perché-lo-spazio) · [Team](#team) · [Contatti](#contatti)
+[Il progetto](#il-progetto) · [Il problema](#il-problema) · [Come funziona](#come-funziona) · [Dalla correlazione alla causa](#dalla-correlazione-alla-causa) · [Cosa costruiamo](#cosa-costruiamo) · [Cosa otteniamo](#cosa-otteniamo) · [Perché lo spazio](#perché-lo-spazio) · [Team](#team) · [Contatti](#contatti)
 
 </div>
 
@@ -73,6 +73,32 @@ Il progetto si regge sull'anomaly detection basata sui residui. Un Digital Twin 
   </picture>
 </p>
 
+## Dalla correlazione alla causa
+
+Un singolo segnale raramente basta. Uno scostamento che nasce in un sottosistema si manifesta in un altro, con ritardi diversi. Un'occlusione parziale della pompa di ricircolo, per esempio, riduce la portata; poi cala l'ossigeno, sale l'ammoniaca e si sposta il pH. Letti uno per uno, i canali indicano un problema chimico, e una correzione chimica coprirebbe la causa senza risolverla. Letti insieme, il primo scostamento che il modello non sa spiegare è quello della portata, quindi la causa è idraulica.
+
+Il sistema ragiona così su finestre di dati multivariate. Insieme all'allarme restituisce l'ipotesi di causa, la sua probabilità e il tempo utile per intervenire.
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/divider-dark.svg">
+    <img src="assets/divider-light.svg" width="420" alt="">
+  </picture>
+</p>
+
+## Cosa costruiamo
+
+- **Cockpit**: una vista dell'impianto in tempo reale, con i valori collocati nel punto in cui vengono misurati, le tendenze, gli allarmi e le azioni consigliate. Si usa da postazione fissa, da remoto o da mobile.
+- **Digital Twin**: un modello basato sui bilanci di massa ed energia, allineato di continuo ai dati di esercizio. Calcola i valori attesi e permette di simulare scenari what-if.
+- **Diagnosi con AI**: rilevazione, isolamento e prognosi delle anomalie, con escalation all'operatore quando l'evidenza non basta.
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/divider-dark.svg">
+    <img src="assets/divider-light.svg" width="420" alt="">
+  </picture>
+</p>
+
 ## Cosa otteniamo
 
 - **Rilevazione**: il sistema segnala l'anomalia anche quando il valore resta dentro la soglia.
@@ -80,6 +106,9 @@ Il progetto si regge sull'anomaly detection basata sui residui. Un Digital Twin 
 - **Canale visuale**: le telecamere guardano la coltura. Se le sonde vedono uno scostamento e la pianta sta bene, il sospetto cade sul sensore.
 - **Prognosi**: stima quanto tempo resta prima che una grandezza esca dai limiti e quando conviene ricalibrare ogni sonda.
 - **Guasti indotti**: quando lo storico non contiene ancora guasti, li provochiamo noi, in modo controllato e reversibile, per insegnare al sistema a riconoscerli.
+- **Sensori virtuali**: se una misura manca, il Digital Twin la ricostruisce dalle altre con un'incertezza dichiarata, e l'impianto continua a lavorare in modalità degradata entro margini noti.
+- **Dati di cui fidarsi**: ogni intervallo dei dataset prodotti esce con un indice di attendibilità.
+- **Nessuna finestra scoperta**: notti, fine settimana e chiusure smettono di essere ore senza sorveglianza.
 
 <p align="center">
   <picture>
@@ -91,6 +120,8 @@ Il progetto si regge sull'anomaly detection basata sui residui. Un Digital Twin 
 ## Perché lo spazio
 
 Verso Marte un messaggio impiega fino a 22 minuti ad arrivare e, durante la congiunzione solare, le comunicazioni si interrompono per settimane. Un guasto in una serra a ciclo chiuso va gestito in poche ore, quindi la serra deve saper fare la diagnosi da sola.
+
+Nei sistemi spaziali questa capacità ha un nome preciso, Fault Detection, Isolation and Recovery: rilevare un guasto, localizzarlo e avviare il ripristino. Sulle piattaforme robotiche è prassi consolidata, mentre nelle serre, dove una parte del sistema da diagnosticare è viva, è ancora poco applicata. Nella serra antartica EDEN ISS, analogo terrestre delle serre spaziali, nell'inverno 2019 l'equipaggio dedicava alla serra circa 2,6 ore al giorno.
 
 Sulla Terra questo vuol dire un impianto conducibile da remoto per un intero ciclo colturale, che fa anche da analogo terrestre di una serra per missioni di lunga durata.
 
