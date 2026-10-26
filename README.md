@@ -6,7 +6,7 @@
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/strip-dark.svg">
-    <img src="assets/strip-light.svg" width="620" alt="Anomaly detection, Digital Twin, pilota in avvio, Roma">
+    <img src="assets/strip-light.svg" width="440" alt="Anomaly detection, Digital Twin, pilota in avvio, Roma">
   </picture>
 </p>
 
